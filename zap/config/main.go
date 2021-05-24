@@ -10,7 +10,7 @@ func main() {
 	rawJSON := []byte(`{
 		"level":"debug",
 		"encoding":"json",
-		"outputPaths": ["stdout", "server.log"],
+		"outputPaths": ["server.log"],
 		"errorOutputPaths": ["stderr"],
 		"initialFields":{"name":"dj"},
 		"encoderConfig": {

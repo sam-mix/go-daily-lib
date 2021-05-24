@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"gopkg.in/go-playground/validator.v10"
+	"github.com/go-playground/validator"
 )
 
 func main() {

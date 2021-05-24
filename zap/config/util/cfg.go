@@ -11,7 +11,7 @@ func GetLogger() *zap.Logger {
 		"level":"debug",
 		"encoding":"json",
 		"outputPaths": ["../server.log"],
-		"errorOutputPaths": ["stderr"],
+		"errorOutputPaths": ["../err.log"],
 		"initialFields":{"name":"dj"},
 		"encoderConfig": {
 			"messageKey": "message",

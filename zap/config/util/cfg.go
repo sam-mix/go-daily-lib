@@ -1,4 +1,4 @@
-package main
+package util
 
 import (
 	"encoding/json"
@@ -6,11 +6,11 @@ import (
 	"go.uber.org/zap"
 )
 
-func main() {
+func GetLogger() *zap.Logger {
 	rawJSON := []byte(`{
 		"level":"debug",
 		"encoding":"json",
-		"outputPaths": ["server.log"],
+		"outputPaths": ["../server.log"],
 		"errorOutputPaths": ["stderr"],
 		"initialFields":{"name":"dj"},
 		"encoderConfig": {
@@ -28,7 +28,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer logger.Sync()
 
-	logger.Info("server start work successfully!")
+	return logger
 }
